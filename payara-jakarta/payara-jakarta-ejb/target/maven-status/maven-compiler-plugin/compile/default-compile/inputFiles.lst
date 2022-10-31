@@ -1,0 +1,17 @@
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/bean/impl/ProfesionFacade.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/entity/Estudios.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/controller/TelefonoController.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/entity/EstudiosPK.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/controller/PersonaController.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/controller/EstudiosController.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/entity/Profesion.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/bean/impl/TelefonoFacade.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/controller/ProfesionController.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/bean/impl/PersonaFacade.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/bean/impl/EstudiosFacade.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/bean/TelefonoFacadeLocal.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/entity/Telefono.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/bean/AbstractFacade.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/controller/util/PaginationHelper.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/controller/util/JsfUtil.java
+/Users/carlosloreto/NetBeansProjects/payara-jakarta/payara-jakarta-ejb/src/main/java/co/edu/javeriana/as/payara/jakarta/personapp/ejb/entity/Persona.java

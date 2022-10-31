@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTelefonoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTelefonoLabel_num}" for="num" />
+                    <h:inputText id="num" value="#{telefonoController.selected.num}" title="#{bundle.CreateTelefonoTitle_num}" required="true" requiredMessage="#{bundle.CreateTelefonoRequiredMessage_num}"/>
+                    <h:outputLabel value="#{bundle.CreateTelefonoLabel_oper}" for="oper" />
+                    <h:inputText id="oper" value="#{telefonoController.selected.oper}" title="#{bundle.CreateTelefonoTitle_oper}" required="true" requiredMessage="#{bundle.CreateTelefonoRequiredMessage_oper}"/>
+                    <h:outputLabel value="#{bundle.CreateTelefonoLabel_duenio}" for="duenio" />
+                    <h:selectOneMenu id="duenio" value="#{telefonoController.selected.duenio}" title="#{bundle.CreateTelefonoTitle_duenio}" required="true" requiredMessage="#{bundle.CreateTelefonoRequiredMessage_duenio}">
+                        <f:selectItems value="#{personaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{telefonoController.create}" value="#{bundle.CreateTelefonoSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{telefonoController.prepareList}" value="#{bundle.CreateTelefonoShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTelefonoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

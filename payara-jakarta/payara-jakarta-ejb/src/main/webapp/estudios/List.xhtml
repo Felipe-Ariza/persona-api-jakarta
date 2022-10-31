@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListEstudiosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListEstudiosEmpty}" rendered="#{estudiosController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{estudiosController.items.rowCount > 0}">
+                    <h:outputText value="#{estudiosController.pagination.pageFirstItem + 1}..#{estudiosController.pagination.pageLastItem + 1}/#{estudiosController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{estudiosController.previous}" value="#{bundle.Previous} #{estudiosController.pagination.pageSize}" rendered="#{estudiosController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{estudiosController.next}" value="#{bundle.Next} #{estudiosController.pagination.pageSize}" rendered="#{estudiosController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{estudiosController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEstudiosTitle_fecha}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.fecha}">
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEstudiosTitle_univer}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.univer}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEstudiosTitle_persona}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.persona}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListEstudiosTitle_profesion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.profesion}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{estudiosController.prepareView}" value="#{bundle.ListEstudiosViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{estudiosController.prepareEdit}" value="#{bundle.ListEstudiosEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{estudiosController.destroy}" value="#{bundle.ListEstudiosDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{estudiosController.prepareCreate}" value="#{bundle.ListEstudiosCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListEstudiosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
